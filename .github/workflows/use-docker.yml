@@ -3,18 +3,17 @@ name: Node.js CI
 on: [push]
 
 jobs:
-  Use-Docker:
+  VRT:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-
-    - name: Build with custom Dockerfile
-      run: |
-        docker build --build-arg NODE_VERSION=16 -f ${GITHUB_WORKSPACE}/vrt/DOCKERFILE -t backstop-vrt ${GITHUB_WORKSPACE}
-        echo "Docker build complete"
-
-    - name: Run the container and echo "hello world"
-      run: |
-        docker run backstop-vrt sh -c "echo 'hello world'"
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+    - name: Install dependencies
+      run: pnpm install
+    - name: Run backstop tests
+      run: pnpm run test:backstop
