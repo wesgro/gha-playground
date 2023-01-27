@@ -1,4 +1,6 @@
 import type {Config} from 'backstopjs'
+import {CALLING_DIR, LOCAL_DIR} from '../utils'
+console.log({CALLING_DIR, LOCAL_DIR})
 
 export const config: Config = {
     "id": "backstop_default",
@@ -38,11 +40,11 @@ export const config: Config = {
       }
     ],
     "paths": {
-      "bitmaps_reference": "src/backstop_data/bitmaps_reference",
-      "bitmaps_test": "src/backstop_data/bitmaps_test",
-      "engine_scripts": "src/backstop_data/engine_scripts",
-      "html_report": "src/backstop_data/html_report",
-      "ci_report": "src/backstop_data/ci_report"
+      "bitmaps_reference": `${CALLING_DIR}/backstop_data/bitmaps_reference`,
+      "bitmaps_test": `${CALLING_DIR}/backstop_data/bitmaps_test`,
+      "engine_scripts": `${LOCAL_DIR}/backstop_data/engine_scripts`,
+      "html_report": `${CALLING_DIR}/backstop_data/html_report`,
+      "ci_report": `${CALLING_DIR}/backstop_data/ci_report`
     },
     "report": ["browser"],
     "engine": "playwright",
@@ -52,7 +54,7 @@ export const config: Config = {
     },
     "asyncCaptureLimit": 5,
     "asyncCompareLimit": 50,
-    "debug": false,
+    "debug": true,
     "debugWindow": false,
     "dockerCommandTemplate": "docker run --rm -i --mount type=bind,source=\"{cwd}\",target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}"
   }
