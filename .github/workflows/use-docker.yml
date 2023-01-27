@@ -36,4 +36,4 @@ jobs:
     - name: Install dependencies
       run: pnpm install
     - name: Run backstop tests
-      run: pnpm run test:backstop
+      run: pnpm run -r test:backstop test

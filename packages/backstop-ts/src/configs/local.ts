@@ -16,13 +16,13 @@ export const config: Config = {
         "height": 768
       }
     ],
-    "onBeforeScript": "playwright/onBefore.js",
-    "onReadyScript": "playwright/onReady.js",
+    // "onBeforeScript": "playwright/onBefore.js",
+    // "onReadyScript": "playwright/onReady.js",
     "scenarios": [
       {
-        "label": "BackstopJS Homepage",
-        "cookiePath": "backstop_data/engine_scripts/cookies.json",
-        "url": "https://garris.github.io/BackstopJS/",
+        "label": "Google Homepage",
+       
+        "url": "https://www.google.ca/",
         "referenceUrl": "",
         "readyEvent": "",
         "readySelector": "",
@@ -40,11 +40,11 @@ export const config: Config = {
       }
     ],
     "paths": {
-      "bitmaps_reference": `${CALLING_DIR}/backstop_data/bitmaps_reference`,
-      "bitmaps_test": `${CALLING_DIR}/backstop_data/bitmaps_test`,
-      "engine_scripts": `${LOCAL_DIR}/backstop_data/engine_scripts`,
-      "html_report": `${CALLING_DIR}/backstop_data/html_report`,
-      "ci_report": `${CALLING_DIR}/backstop_data/ci_report`
+      "bitmaps_reference": `backstop_data/bitmaps_reference`,
+      "bitmaps_test": `backstop_data/bitmaps_test`,
+      "engine_scripts": `backstop_data/engine_scripts`,
+      "html_report": `backstop_data/html_report`,
+      "ci_report": `backstop_data/ci_report`
     },
     "report": ["browser"],
     "engine": "playwright",

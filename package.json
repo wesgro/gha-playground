@@ -9,6 +9,8 @@
   "packageManager": "pnpm@7.25.0",
   "devDependencies": {
     "typescript": "^4.9.4",
-        "tsx": "^3.12.2"
+        "tsx": "^3.12.2",
+        "backstopjs": "^6"
   }
+  
 }
