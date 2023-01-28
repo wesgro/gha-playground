@@ -1,6 +1,6 @@
 import type {Config} from 'backstopjs'
 import {CALLING_DIR, LOCAL_DIR} from '../utils'
-console.log({CALLING_DIR, LOCAL_DIR})
+
 
 export const config: Config = {
     "id": "backstop_default",
@@ -16,8 +16,8 @@ export const config: Config = {
         "height": 768
       }
     ],
-    // "onBeforeScript": "playwright/onBefore.js",
-    // "onReadyScript": "playwright/onReady.js",
+    "onBeforeScript": "playwright/onBefore.js",
+    "onReadyScript": "playwright/onReady.js",
     "scenarios": [
       {
         "label": "Google Homepage",

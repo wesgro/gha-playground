@@ -1,6 +1,5 @@
-#!/usr/bin/env npx tsx
+#!/usr/bin/env -S npx -y ts-node --swc
 import backstopjs from 'backstopjs'
-import {CALLING_DIR, LOCAL_DIR} from './utils'
 import {config as localConfig} from "./configs/local"
 
 type BackstopParam = Parameters<typeof backstopjs>[0]
