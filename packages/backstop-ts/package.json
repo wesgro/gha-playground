@@ -2,8 +2,9 @@
     "name": "@gha-playground/backstop-ts",
     "version": "1.0.0",
     "description": "",
+    "private": true,
     "bin": {
-        "backstop-ts": "./cli/index.ts"
+      "backstop-ts": "./cli/index.ts"
     },
     "keywords": [],
     "author": "",

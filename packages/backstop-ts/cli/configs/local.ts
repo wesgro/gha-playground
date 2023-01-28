@@ -20,9 +20,9 @@ export const config: Config = {
     "onReadyScript": "playwright/onReady.js",
     "scenarios": [
       {
-        "label": "Google Homepage",
+        "label": "Backstop Homepage",
        
-        "url": "https://www.google.ca/",
+        "url": "https://garris.github.io/BackstopJS/",
         "referenceUrl": "",
         "readyEvent": "",
         "readySelector": "",
@@ -49,12 +49,12 @@ export const config: Config = {
     "report": ["browser"],
     "engine": "playwright",
     "engineOptions": {
-      "args": ["--no-sandbox"],
+      "args": ["--no-sandbox", "--font-render-hinting=none", "--disable-skia-runtime-opts", "--disable-font-subpixel-positioning", "--disable-lcd-text"],
       "browser": "chromium"
     },
     "asyncCaptureLimit": 5,
     "asyncCompareLimit": 50,
-    "debug": true,
+    "debug": false,
     "debugWindow": false,
     "dockerCommandTemplate": "docker run --rm -i --mount type=bind,source=\"{cwd}\",target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}"
   }
