@@ -1,8 +1,6 @@
 import type {Config} from 'backstopjs'
-import {CALLING_DIR, LOCAL_DIR} from '../utils'
 
-
-export const config: Config = {
+const config: Config = {
     "id": "backstop_default",
     "viewports": [
       {
@@ -59,3 +57,4 @@ export const config: Config = {
     "dockerCommandTemplate": "docker run --rm -i --mount type=bind,source=\"{cwd}\",target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}"
   }
   
+  export default config

@@ -3,14 +3,15 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-      "test:backstop": "backstop-ts"
+        "test:backstop": "backstop-ts --config ./backstop.config"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "jest": "^29",
-        "@gha-playground/backstop-ts": "workspace:*"
+        "vitest": "^0.28.3",
+        "@gha-playground/cli": "workspace:*",
+        "backstopjs": "^6",
+        "@types/backstopjs": "^4.1.2"
     }
-  }
-  
+}
