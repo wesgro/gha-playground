@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+**/backstop_data/bitmaps_test
+**/backstop_data/html_report

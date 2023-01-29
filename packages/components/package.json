@@ -1,0 +1,16 @@
+{
+    "name": "@gha-playground/components",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+      "test:backstop": "backstop-ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "jest": "^29",
+        "@gha-playground/backstop-ts": "workspace:*"
+    }
+  }
+  
